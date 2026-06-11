@@ -1,4 +1,4 @@
-// 
+
 const paysans = [
     {
         id: 1,
@@ -29,6 +29,19 @@ const paysans = [
     }
 ]
 
+const loginPage = document.querySelector(".loginPage");
+const btnLogin = document.querySelector(".btnLogin");
+const sign = document.querySelector(".sign");
+const inscrire = document.querySelector(".inscrire");
+const dashboard = document.querySelector(".dashboard");
+const insriReussi = document.querySelector(".insriReussi");
+const reconnect = document.querySelector(".reconnect");
+const loginConnecter = document.querySelector("#loginConnecter");
+const mdpConnecter = document.querySelector("#mdpConnecter");
+const prenom = document.querySelector("#prenom");
+const login = document.querySelector("#login");
+const mdp = document.querySelector("#mdp");
+
 
 const tbody = document.querySelector("tbody");
 const ide = document.querySelector("#ide");
@@ -40,9 +53,83 @@ const fertilisant = document.querySelector("#fertilisant");
 const date = document.querySelector("#date");
 let dateD = new Date();
 let jour = dateD.getDate();
-let mois = dateD.getMonth() + 1; // attention +1
+let mois = dateD.getMonth() + 1; 
 let annee = dateD.getFullYear();
 let dateFormat = `${jour}/${mois}/${annee}`;
+
+loginPage.style.overflow = "hidden";
+inscrire.style.overflow = "hidden";
+inscrire.style.display = "none";
+dashboard.style.display = "none";
+console.log("bonjour");
+
+
+
+btnLogin.addEventListener("click",()=>{
+    let loginValue = loginConnecter.value;
+    let mdpValue = mdpConnecter.value;
+   let users = JSON.parse(localStorage.getItem("users")) || [];
+
+let verif = users.find(
+    el => el.email === loginValue && el.mdp === mdpValue
+);
+
+if(verif){
+    alert("Connexion réussie");
+    inscrire.style.display = "none";
+    loginPage.style.display = "none";
+    dashboard.style.display = "flex";
+}else{
+    alert("Vous n'avez pas de compte");
+}
+
+})
+
+sign.addEventListener("click", ()=>{
+    inscrire.style.display = "flex";
+    loginPage.style.display = "none";
+})
+
+insriReussi.addEventListener("click", () => {
+
+    let insNom = nom.value;
+    let insEmail = login.value;
+    let insMdp = mdp.value;
+
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    let existe = users.some(
+        user => user.email === insEmail
+    );
+
+    if (existe) {
+        alert("Vous avez déjà un compte");
+    } else {
+
+        let nouveau = {
+            nom: insNom,
+            email: insEmail,
+            mdp: insMdp
+        };
+
+    
+        users.push(nouveau);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Inscription réussie !");
+
+        inscrire.style.display = "none";
+        loginPage.style.display = "flex";
+    }
+});
+
+  reconnect.addEventListener("click", ()=>{
+                inscrire.style.display = "none";
+                loginPage.style.display = "flex";
+            })
+
+
 
 function tabPaysan(tab){
     tab.forEach(element => {

@@ -42,10 +42,11 @@ const prenom = document.querySelector("#prenom");
 const login = document.querySelector("#login");
 const mdp = document.querySelector("#mdp");
 
-
+const username = document.querySelector(".userAdmin h2");
 const tbody = document.querySelector("tbody");
 const ide = document.querySelector("#ide");
 const nom = document.querySelector("#nomm");
+const nomP = document.querySelector("#nom");
 const localite = document.querySelector("#localite");
 const culture = document.querySelector("#culture");
 const semence = document.querySelector("#semence");
@@ -69,6 +70,17 @@ btnLogin.addEventListener("click",()=>{
     let loginValue = loginConnecter.value;
     let mdpValue = mdpConnecter.value;
    let users = JSON.parse(localStorage.getItem("users")) || [];
+   users.forEach(el =>{
+    if(el.email === loginValue){
+      let sonNom = el.nom;  
+      username.innerHTML = `${sonNom}`;  
+        
+    }
+    
+   })
+   
+   
+   
 
 let verif = users.find(
     el => el.email === loginValue && el.mdp === mdpValue
@@ -79,7 +91,13 @@ if(verif){
     inscrire.style.display = "none";
     loginPage.style.display = "none";
     dashboard.style.display = "flex";
-}else{
+    username.innerHTML = `${insNom}`;
+
+}
+else if(loginValue == "" || mdpValue == ""){
+    alert("Veuiller remplir les champs");
+}
+else{
     alert("Vous n'avez pas de compte");
 }
 
@@ -92,7 +110,7 @@ sign.addEventListener("click", ()=>{
 
 insriReussi.addEventListener("click", () => {
 
-    let insNom = nom.value;
+    let insNom = nomP.value;
     let insEmail = login.value;
     let insMdp = mdp.value;
 
@@ -104,7 +122,13 @@ insriReussi.addEventListener("click", () => {
 
     if (existe) {
         alert("Vous avez déjà un compte");
-    } else {
+    } 
+
+    else if(insEmail == "" || insNom == "" || insMdp == ""){
+        alert("Veuiller remplire toutes les champs !")
+    }
+    
+    else {
 
         let nouveau = {
             nom: insNom,
@@ -116,11 +140,14 @@ insriReussi.addEventListener("click", () => {
         users.push(nouveau);
 
         localStorage.setItem("users", JSON.stringify(users));
-
         alert("Inscription réussie !");
 
         inscrire.style.display = "none";
-        loginPage.style.display = "flex";
+        dashboard.style.display = "flex";
+       
+        
+        username.innerHTML = `${insNom}`;
+
     }
 });
 

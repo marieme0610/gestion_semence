@@ -1,0 +1,240 @@
+ @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+ :root {
+        --primary: #192A3A;
+        --blue-secondaire: rgba(44, 58, 71, 0.28);;
+        --green-ternary: #2AA170;;
+        --body-color: #0D1D2C;
+        --white: #F8F6F6;
+        --greenCard:rgba(44, 58, 71, 0.28); 
+        --cyanCard:rgba(32, 151, 178, 0.53); 
+        --fonceGreen-Card:rgba(2, 89, 82, 0.53); 
+        --last-Card:rgba(5, 57, 71, 1); 
+        --center:rgba(32, 62, 89, 0.34); 
+        --vertBtn:#1F5F50; 
+        --card1:rgba(40, 146, 105, 0.53); 
+        --card2:rgba(32, 151, 178, 0.53);  
+        --card3:rgba(2, 89, 82, 0.53); 
+        --card4:rgba(5, 57, 71, 1); 
+        --blanc:#dfdfdf; 
+        --max-width: 1100px;
+        }
+
+.dashboard{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+     font-family: "Roboto Condensed", sans-serif;
+}
+.sidebar{
+    flex: 1; background-color: var(--primary);
+    border-right: #333 solid 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu{
+    display: flex;
+    flex: 10;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 0 2rem;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--blanc);
+}
+.dash{
+    background-color: rgba(44, 58, 71, 1);
+}
+
+.logo img{
+    height: 8rem;
+    width: 17rem;
+}
+.logo{
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.memeTaille{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+}
+
+.autreTaille{
+    flex: 10;
+}
+
+.ongletA{
+    padding-left: 15px;
+}
+.central{
+    flex: 5; 
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.navBarre{
+    flex: 1;
+    display: flex;
+    background-color: var(--primary);
+}
+
+.droite{
+    flex: 7;
+    display: flex;
+    background-color: #0D1D2C;
+    flex-direction: column;
+    margin: 0 2%;
+    gap: 1%;
+}
+
+.cards{
+    flex: 1;
+    background-color:var(--center);
+    border-radius: 19px;
+    padding: 2% 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.tab{
+    flex: 3;
+    background-color: var(--center);
+    border-radius: 19px;
+
+}
+
+.card1234{
+    display: grid;
+    flex: 1;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 1.5% 0;
+}
+
+.onglet:hover{
+    background-color: rgba(44, 58, 71, 1);
+    cursor: pointer;
+}
+
+.onglet{
+    padding-left: 15px;
+}
+
+
+
+.card1{
+    background-color: var(--card1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    color: #00FF96;
+}
+
+.soustitre{
+    color: #00FF96;
+}
+.card2{
+    background-color: var(--card2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    color: #00FF96;
+}
+
+.card3{
+    background-color: var(--card3);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    color: #00FF96;
+}
+
+.card4{
+    background-color: var(--card4);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    color: #00FF96;
+}
+
+.recherche{
+flex: 2.7;
+position: relative;
+ height: 3rem;
+ margin-left: 20px;
+ width: 27rem; 
+}
+
+.reFamille{
+    width: 30%;
+}
+
+.recherche i{
+    position: absolute;
+    top: 32px;
+    left: 15px;
+}
+
+.inputRecherche{
+    background-color: #2C3A47;
+    border-radius: 13px;
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px; 
+    padding-left: 55px;
+    font-size:18px ;
+    border: solid 1px #333;
+}
+
+.infoUser{
+    display: flex;
+    padding-top: 2rem;
+    flex: 1;
+    border-left: 1px solid #333;
+    color: #c1c0c0;
+    justify-content: space-between;
+}
+
+.card{
+    border-radius: 11px;
+}
+
+table{
+    border-collapse: collapse;
+}
+
+table th{
+    border: solid 0.5px;
+    font-size: 20px;
+    background-color: var(--vertBtn);
+    padding: 10px;
+}
+
+td{
+    padding: 15px;
+    font-size:18px;
+    color: var(--blanc);
+}
+
+tr{
+    background-color: #2C3A47;
+    cursor: pointer;
+}
+tr:hover{
+    background-color: #213B48;
+    cursor: pointer;
+}
+
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Lato|Staatliches" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inscription.css">
+    <link rel="stylesheet" href="dashbord.css">
+    <title>AgriSemence</title>
+</head>
+<body>
+    <div class="loginPage">
+         <div class="logLeft">
+            <div class="nuit">
+                <div class="vertNoir">
+                    <div class="menthe">
+                        <div class="nuitLast">
+                            <img src="images/logo.png" alt="logo" style="width: 35rem; height: 15rem;">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="logRight">
+            <div class="bloc1">
+                <h1 style="margin: 5rem 0; font-size:52px ; color: #2AA170; text-align: center;">Se connecter</h1>
+            
+                <label for="" style="display: flex; flex-direction: column; margin-bottom: 2rem;">
+                   <span style="color: #7e7d7d; margin-bottom: 1rem;">Login</span>
+                   <div class="divInput">
+                    <i class="fa-regular fa-envelope" style="color: #7e7d7d;"></i>
+                    <input id="loginConnecter" type="text" placeholder="Entrer votre login" class="champLog" >
+                   </div>
+                </label>
+                 <label for="" style="display: flex; flex-direction: column;">
+                   <span style="color: #7e7d7d; margin-bottom: 1rem;">Mot de passe</span>
+                    <div class="divInput">
+                    <img src="images/mdp.png" alt="mdp">
+                    <input id="mdpConnecter" type="password" placeholder="Entrer votre mot de passe" class="champLog" >
+                   </div>
+                     <span style="color: #2AA170; margin-bottom: 1rem; text-align: end; margin-top: 1rem;">Mot de passe oublié ?</span>
+                </label>
+                <button class="btnLogin bntLog" ><span>Se connecter</span></button>
+                <button class="btnmdp bntLog sign"><span>S'inscrire</span></button>
+            </div>
+            <div class="bloc3">
+            </div>
+        </div>
+       
+    </div>
+
+        <div class="inscrire">
+         <div class="logLeft">
+            <div class="nuit">
+                <div class="vertNoir">
+                    <div class="menthe">
+                        <div class="nuitLast">
+                            <img src="images/logo.png" alt="logo" style="width: 35rem; height: 15rem;">
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+        <div class="logRight">
+            <div class="bloc1">
+                <h1 style="margin: 5rem 0; font-size:52px ; color: #2AA170; text-align: center;">S'inscrire</h1>
+             <label for="" style="display: flex; flex-direction: column; margin-bottom: 2rem;">
+                   <span style="color: #7e7d7d; margin-bottom: 1rem;">Nom d'utilisateur</span>
+                   <div class="divInput">
+                    <img src="images/user.svg" alt="">
+                    <input id="nom" type="text" placeholder="Entrer votre nom d'utilisateur" class="champLog" >
+                   </div>
+                </label>
+                <label  for="login" style="display: flex; flex-direction: column; margin-bottom: 2rem;">
+                   <span style="color: #7e7d7d; margin-bottom: 1rem;">Login</span>
+                   <div class="divInput">
+                    <i class="fa-regular fa-envelope" style="color: #7e7d7d;"></i>
+                    <input id="login" type="text" placeholder="Entrer votre login" class="champLog" >
+                   </div>
+                </label>
+                 <label for="login" style="display: flex; flex-direction: column;">
+                   <span style="color: #7e7d7d; margin-bottom: 1rem;">Mot de passe</span>
+                    <div class="divInput">
+                    <img src="images/mdp.png" alt="mdp">
+                    <input id="mdp" type="password" placeholder="Entrer votre mot de passe" class="champLog" >
+                   </div>
+                </label>
+                <button class="btnmdp bntLog insriReussi"><span>Passer mon inscription</span></button>
+                <span class="reconnect" style="color: #2AA170; margin-bottom: 1rem; text-align: end; margin-top: 1rem;">J'ai deja un compte me connecter. </span>
+
+            </div>
+        </div>
+       
+    </div>
+<div class="dashboard">
+    <div class="sidebar">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+       <div class="menu">
+         <div class="memeTaille dash onglet"><img src="images/home.svg" alt=""><span class="ongletA">Tableau de bord</span></div>
+        <div class="memeTaille onglet"><img src="images/users.svg" alt=""><span class="ongletA">Paysans</span></div>
+        <div class="memeTaille onglet"><img src="images/stock.svg" alt=""><span class="ongletA">Stocks</span></div>
+        <div class="memeTaille onglet"> <img src="images/distribution.svg" alt=""><span class="ongletA">Distributions</span></div>
+        <div class="memeTaille onglet"><img src="images/suivie.svg" alt=""><span class="ongletA">Suivie</span></div>
+        <div class="autreTaille"></div>
+       </div>
+    </div>
+    <div class="central">
+      <div class="navBarre">
+       
+        <div class="recherche" >
+            <div class="reFamille">
+                <i class="fa-solid fa-magnifying-glass" style="color:#7e7d7d "></i>
+            <input type="text" placeholder="Rechercher ..." class="inputRecherche">
+            </div>
+        </div>
+        <div class="infoUser">
+            <div class="userAdmin">
+                <h2 style="padding-left: 20px; font-size: 25px;">Samba DIOP</h2>
+            <small style="padding-left: 20px;">Admin</small>
+            </div>
+            <div>
+                <i class="fa-solid fa-angle-down" style="color: #c1c0c0; padding-right: 30px; padding-top: 20px;"></i>
+            </div>
+        </div>
+       
+      </div>
+      <div class="droite">
+        <div class="cards">
+            <div style="color: #d6d8d8; font-size: 28px; ">Bienvenue Samba DIOP !</div>
+           <div class="card1234">
+             <div class="card card1">
+                <h1>0</h1>
+                <p class="soustitre">Paysans Recencé</p>
+             </div>
+            <div class="card card2">
+                <h1>0</h1>
+                <p class="soustitre">Paysans Recencé</p>
+            </div>
+            <div class="card card3">
+                <h1>0</h1>
+                <p class="soustitre">Paysans Recencé</p>
+            </div>
+            <div class="card card4">
+                <h1>0</h1>
+                <p class="soustitre">Paysans Recencé</p>
+            </div>
+           </div>
+        </div>
+      <div class="tab">
+        <h1 style="padding-left: 40px; font-size: 28px; color: rgb(219, 219, 217); margin-top: 20px; margin-bottom: 3rem;">Vue d'ensemble des Distributions & Suivi</h1>
+        <table style="width: 100%; color: rgb(225, 225, 225);">
+            <thead>
+                <th id="ide">ID</th>
+                <th id="nomm">Nom du Paysan</th>
+                <th id="localite">Localité</th>
+                <th id="culture">Culture</th>
+                <th id="semence">Semence en kg</th>
+                <th id="fertilisant">Fertilisant en kg</th>
+                <th id="date">Date</th>
+            </thead>
+            <tbody></tbody>
+        </table>
+      </div>
+      </div>
+
+     
+
+    </div>
+</div>
+
+<script src="script.js"></script>    
+</body>
+</html>

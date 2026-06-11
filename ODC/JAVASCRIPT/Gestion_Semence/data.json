@@ -1,0 +1,15 @@
+{
+    "users" :[
+        {
+            "nom" : "marieme",
+            "email" : "marieme06",
+            "mdp" : "0610"
+        },
+         {
+            "nom" : "fatou",
+            "email" : "fatou06",
+            "mdp" : "0611"
+        }
+
+    ]
+}
